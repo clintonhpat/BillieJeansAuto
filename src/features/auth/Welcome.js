@@ -6,7 +6,7 @@ const Welcome = () => {
 
     const { username, isManager, isAdmin } = useAuth()
 
-    useTitle(`techNotes: ${username}`)
+    useTitle(`Shop Notes: ${username}`)
 
     const date = new Date()
     const today = new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'long' }).format(date)
@@ -18,9 +18,9 @@ const Welcome = () => {
 
             <h1>Welcome {username}!</h1>
 
-            <p><Link to="/dash/notes">View techNotes</Link></p>
+            <p><Link to="/dash/notes">View Shop Notes</Link></p>
 
-            <p><Link to="/dash/notes/new">Add New techNote</Link></p>
+            <p><Link to="/dash/notes/new">Add New Shop Note</Link></p>
 
             {(isManager || isAdmin) && <p><Link to="/dash/users">View User Settings</Link></p>}
 
